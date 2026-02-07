@@ -1,0 +1,67 @@
+#home-container {
+    display: flex;
+    flex-direction: column;
+    max-width: min(100%, 800px);
+    margin: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+#home-content {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+
+#home-container h1 {
+    max-width: 100%;
+    margin: auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+#home-container p {
+    margin-bottom: 1.3rem;
+    font-size: 1.05rem;
+}
+
+
+#home-container ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+}
+
+#home-container li {
+    margin-bottom: 0.6rem;
+}
+
+
+#home-container a {
+    color: #5ac8fa;
+    text-decoration: underline transparent;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+#home-container a:hover {
+    color: #82d3ff;
+    text-decoration-color: #82d3ff;
+}
+
+
+#home-container ::selection {
+    background: #5ac8fa;
+    color: #0f1116;
+}
+
+@media screen {
+    #home-container h1 {
+        max-width: 100%;
+        font-size: large;
+    }
+}

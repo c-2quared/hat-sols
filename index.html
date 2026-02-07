@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta name="description" content="Hatcher Solutions">
+
+    <meta name="author" content="c squared">
+
+    <!-- Adjusts rendering on different viewing devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hatcher - Alg. Top. Solutions</title>
+
+    <!-- Browsers aggressively cache favicons. Use Ctrl + Shift + R (Windows/Linux) or Cmd + Shift + R (Mac) 
+             to reset the browser cache when changing favicon -->
+    <!-- The favicon and its author can be found here: https://commons.wikimedia.org/wiki/File:Kirby_Learns_Algebraic_Topology.gif#filelinks -->
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/sols.css">
+    <link rel="stylesheet" href="/css/chapter.css">
+
+
+    <!-- Scripts -->
+
+    <!-- Load MathJax config and MathJax -->
+    <script src="/js/mathjax-config.js" defer></script>
+
+    <script type="module" src="/js/router.js" defer></script>
+
+    <script src="/js/index.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="kirby-container" id="kirby-container-left">
+            <img class="kirby-img" src="/static/images/Kirby_Learns_Algebraic_Topology.gif"
+                alt="Kirby Kirby Learns Algebraic Topology gif">
+        </div>
+
+        <h1 id="page-title">Hatcher - Algebraic Topology Solutions</h1>
+
+        <div class="kirby-container" id="kirby-container-right">
+            <img class="kirby-img" src="/static/images/Kirby_Learns_Algebraic_Topology.gif"
+                alt="Kirby Kirby Learns Algebraic Topology gif">
+        </div>
+    </header>
+
+    <div id="btn-container">
+        <div id="nav-btn-container">
+            <button id="nav-btn" onclick="toggleNavMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+
+        <div id="git-dm-btn-container">
+            <a href="https://github.com/c-2quared/hat-sols" id="github-link" target="_blank" rel="noopener">
+                <img src="/static/github-mark.svg" alt="GitHub" id="github-img">
+            </a>
+        </div>
+    </div>
+    <div id="page">
+        <!-- <div id="nav-container"> -->
+        <nav id="nav-menu" class="nav-menu">
+            <ul class="mm-listview">
+                <li>
+                    <a class="mm-link" href="/home">
+                        <span class="mm-link-text">Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="mm-link" href="/chapter-0">
+                        <span class="mm-link-text">Chapter 0.</span>
+                        Some Underlying Geometric Notions
+                    </a>
+                </li>
+
+                <li>
+                    <a class="mm-link" href="/chapter-1">
+                        <span class=" mm-link-text">Chapter 1.</span>
+                        The Fundamental Group
+                    </a>
+                </li>
+
+                <li>
+                    <a class="mm-link" href="/chapter-2">
+                        <span class="mm-link-text">Chapter 2.</span>
+                        Homology
+                    </a>
+                </li>
+
+                <li>
+                    <a class="mm-link" href="/chapter-3">
+                        <span class="mm-link-text">Chapter 3.</span>
+                        Cohomology
+                    </a>
+                </li>
+
+                <li>
+                    <a class="mm-link" href="/chapter-4">
+                        <span class="mm-link-text">Chapter 4.</span>
+                        Homotopy Theory
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- </div> -->
+
+        <div id="content" class="content-slideout"></div>
+    </div>
+</body>
+
+</html>
+
+<!-- Chapter Template -->
+<template id="chapter-template">
+    <div class="chapter-container">
+        <h1 class="chapter-title"></h1>
+    </div>
+</template>
+
+<!-- Exercise Template -->
+<template id="exercise-template">
+    <li class="exercise-li" href="">
+        <span class="exercise-title"></span>
+        <div class="exercise-statement"></div>
+    </li>
+</template>
+
+<!-- Hint Template -->
+<template id="hint-template">
+    <details class="hint-details">
+        <summary summary-open="Close Hint" summary-closed="Hint"></summary>
+    </details>
+</template>
+
+<!-- Solution Template -->
+<template id="solution-template">
+    <div class="exercise-container">
+        <h1 class="exercise-title"></h1>
+        <div class="exercise-statement"></div>
+
+        <div class="hint-container"></div>
+
+        <details class="solution-details">
+            <summary summary-open="Solution" summary-closed="Solution"></summary>
+            <div class="solution-container"></div>
+        </details>
+    </div>
+</template>
